@@ -1,7 +1,7 @@
 # osx-razer-led
 Command-line application to control lights on Razer Blade that are running a Hackintosh (macOS on a non-Apple device). Successfully tested so far on a Razer Blade Stealth (Late 2017) and Razer Blade 15 Base (2019). The driver should work with older and new Razer laptops as well. It supports various effects on the keyboard and the ability to turn the monitor Razer logo on and off.
 
-This simple application builds on the porting work by @kprinssu and their https://github.com/kprinssu/osx-razer-blade project. The Razer driver was adapted from the Linux project, https://github.com/terrycain/razer-drivers/.
+This simple application builds on the porting work by @kprinssu and their https://github.com/kprinssu/osx-razer-blade project. The Razer driver was adapted from the Linux project, https://github.com/openrazer/openrazer/.
 
 This fork of [osx-razer-led](https://github.com/dylanparker/osx-razer-led) is not based on the original [osx-razer-blade](https://github.com/kprinssu/osx-razer-blade) but on my own [fork](https://github.com/DocSystem/osx-razer-blade) that adds support for the latest Razer drivers.
 
