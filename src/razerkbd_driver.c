@@ -52,6 +52,11 @@ bool is_blade_laptop(IOUSBDeviceInterface **usb_dev) {
         case USB_DEVICE_ID_RAZER_BLADE_STEALTH_LATE_2019:
         case USB_DEVICE_ID_RAZER_BLADE_PRO_2019:
         case USB_DEVICE_ID_RAZER_BLADE_PRO_LATE_2019:
+        case USB_DEVICE_ID_RAZER_BLADE_STEALTH_EARLY_2020:
+        case USB_DEVICE_ID_RAZER_BLADE_STEALTH_LATE_2020:
+        case USB_DEVICE_ID_RAZER_BOOK_2020:
+        case USB_DEVICE_ID_RAZER_BLADE_15_ADV_2020:
+        case USB_DEVICE_ID_RAZER_BLADE_EARLY_2020_BASE:
             return true;
     }
     
@@ -111,6 +116,22 @@ int razer_attr_read_device_type(IOUSBDeviceInterface **usb_dev, char *buf) {
             device_type = "Razer Blade Stealth\n";
             break;
 
+        case USB_DEVICE_ID_RAZER_BLADE_STEALTH_LATE_2019:
+            device_type = "Razer Blade Stealth (Late 2019)\n";
+            break;
+
+        case USB_DEVICE_ID_RAZER_BLADE_STEALTH_EARLY_2020:
+            device_type = "Razer Blade Stealth (Early 2020)\n";
+            break;
+
+        case USB_DEVICE_ID_RAZER_BLADE_STEALTH_LATE_2020:
+            device_type = "Razer Blade Stealth (Late 2020)\n";
+            break;
+
+        case USB_DEVICE_ID_RAZER_BOOK_2020:
+            device_type = "Razer Book 13 (2020)\n";
+            break;
+
         case USB_DEVICE_ID_RAZER_BLADE_STEALTH_LATE_2016:
             device_type = "Razer Blade Stealth (Late 2016)\n";
             break;
@@ -138,17 +159,25 @@ int razer_attr_read_device_type(IOUSBDeviceInterface **usb_dev, char *buf) {
         case USB_DEVICE_ID_RAZER_BLADE_2018_BASE:
             device_type = "Razer Blade 15 (2018) Base Model\n";
             break;
-        
-        case USB_DEVICE_ID_RAZER_BLADE_2019_BASE:
-            device_type = "Razer Blade 15 (2019) Base Model\n";
-            break;
 
         case USB_DEVICE_ID_RAZER_BLADE_2019_ADV:
             device_type = "Razer Blade 15 (2019) Advanced\n";
             break;
 
+        case USB_DEVICE_ID_RAZER_BLADE_2019_BASE:
+            device_type = "Razer Blade 15 (2019) Base Model\n";
+            break;
+
+        case USB_DEVICE_ID_RAZER_BLADE_EARLY_2020_BASE:
+            device_type = "Razer Blade 15 Base (Early 2020)\n";
+            break;
+
         case USB_DEVICE_ID_RAZER_BLADE_MID_2019_MERCURY:
             device_type = "Razer Blade 15 (Mid 2019) Mercury White\n";
+            break;
+
+        case USB_DEVICE_ID_RAZER_BLADE_STUDIO_EDITION_2019:
+            device_type = "Razer Blade 15 Studio Edition (2019)\n";
             break;
 
         case USB_DEVICE_ID_RAZER_BLADE_LATE_2016:
@@ -162,6 +191,14 @@ int razer_attr_read_device_type(IOUSBDeviceInterface **usb_dev, char *buf) {
             device_type = "Razer Blade Pro FullHD (2017)\n";
             break;
 
+        case USB_DEVICE_ID_RAZER_BLADE_PRO_2019:
+            device_type = "Razer Blade Pro (2019)\n";
+            break;
+
+        case USB_DEVICE_ID_RAZER_BLADE_PRO_LATE_2019:
+            device_type = "Razer Blade Pro (Late 2019)\n";
+            break;
+
         case USB_DEVICE_ID_RAZER_BLADE_STEALTH_LATE_2017:
             device_type = "Razer Blade Stealth (Late 2017)\n";
             break;
@@ -170,12 +207,20 @@ int razer_attr_read_device_type(IOUSBDeviceInterface **usb_dev, char *buf) {
             device_type = "Razer Blade Stealth (2019)\n";
             break;
 
+        case USB_DEVICE_ID_RAZER_BLADE_15_ADV_2020:
+            device_type = "Razer Blade 15 Advanced (2020)\n";
+            break;
+
         case USB_DEVICE_ID_RAZER_TARTARUS:
             device_type = "Razer Tartarus\n";
             break;
 
         case USB_DEVICE_ID_RAZER_TARTARUS_CHROMA:
             device_type = "Razer Tartarus Chroma\n";
+            break;
+
+        case USB_DEVICE_ID_RAZER_TARTARUS_V2:
+            device_type = "Razer Tartarus V2\n";
             break;
 
         case USB_DEVICE_ID_RAZER_BLACKWIDOW_OVERWATCH:
@@ -214,6 +259,10 @@ int razer_attr_read_device_type(IOUSBDeviceInterface **usb_dev, char *buf) {
             device_type = "Razer BlackWidow 2019\n";
             break;
 
+        case USB_DEVICE_ID_RAZER_BLACKWIDOW_ESSENTIAL:
+            device_type = "Razer BlackWidow Essential\n";
+            break;
+
         case USB_DEVICE_ID_RAZER_ORNATA:
             device_type = "Razer Ornata\n";
             break;
@@ -222,16 +271,36 @@ int razer_attr_read_device_type(IOUSBDeviceInterface **usb_dev, char *buf) {
             device_type = "Razer Ornata Chroma\n";
             break;
 
+        case USB_DEVICE_ID_RAZER_ORNATA_CHROMA_V2:
+            device_type = "Razer Ornata Chroma V2\n";
+            break;
+
         case USB_DEVICE_ID_RAZER_HUNTSMAN_ELITE:
             device_type = "Razer Huntsman Elite\n";
+            break;
+
+        case USB_DEVICE_ID_RAZER_HUNTSMAN_TE:
+            device_type = "Razer Huntsman Tournament Edition\n";
             break;
 
         case USB_DEVICE_ID_RAZER_BLACKWIDOW_ELITE:
             device_type = "Razer BlackWidow Elite\n";
             break;
 
+        case USB_DEVICE_ID_RAZER_HUNTSMAN:
+            device_type = "Razer Huntsman\n";
+            break;
+
         case USB_DEVICE_ID_RAZER_CYNOSA_CHROMA:
             device_type = "Razer Cynosa Chroma\n";
+            break;
+
+        case USB_DEVICE_ID_RAZER_CYNOSA_CHROMA_PRO:
+            device_type = "Razer Cynosa Chroma Pro\n";
+            break;
+
+        case USB_DEVICE_ID_RAZER_CYNOSA_LITE:
+            device_type = "Razer Cynosa Lite\n";
             break;
 
         case USB_DEVICE_ID_RAZER_BLACKWIDOW_CHROMA_V2:
@@ -241,6 +310,15 @@ int razer_attr_read_device_type(IOUSBDeviceInterface **usb_dev, char *buf) {
         case USB_DEVICE_ID_RAZER_ANANSI:
             device_type = "Razer Anansi\n";
             break;
+
+        case USB_DEVICE_ID_RAZER_CYNOSA_V2:
+            device_type = "Razer Cynosa V2\n";
+            break;
+
+        case USB_DEVICE_ID_RAZER_HUNTSMAN_MINI:
+            device_type = "Razer Huntsman Mini\n";
+            break;
+
         default:
             device_type = "Unknown Device\n";
     }
